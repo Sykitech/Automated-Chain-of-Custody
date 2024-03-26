@@ -1,0 +1,896 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --white:white;
+    --black:#13131a;
+    --border:.1rem solid rgba(255,255,255,.3);
+    --gold:#cFB53B;
+    --m-gold:#a57c00;
+    --bg:#a0a0a0;
+    --navygold:#b29758;
+    --greyblue:#5c5f7c;
+    --navyblue:#404472;
+    --blue:#191C40;
+    
+
+}
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-transform: none;
+    text-decoration: none;
+    transition:.2s linear;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+     overflow-x: hidden;
+     scroll-padding-top: 9rem;
+     scroll-behavior: smooth;
+}
+
+html ::-webkit-scrollbar{
+    width: .8rem;
+}
+html ::-webkit-scrollbar-track{
+    background: transparent;
+}
+html ::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background: #fff;
+}
+body{
+    background: var(--bg);
+    display:flex;
+    margin: 0;
+}
+/* login form starts here*/
+.body2{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction:column ;
+    height: 100vh; 
+    margin: 0;
+    margin: auto;
+ }
+ .container2{
+     background-color: #fff;
+     border-radius: 30px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+     position: relative;
+     overflow: hidden;
+     top: 50vh;
+     left: 50vh;
+     transform: translate(-50vh, -50vh);
+     width: 768px;
+     max-width: 100%;
+     min-height: 480px;
+     margin: auto;
+ }
+ 
+ .container2 p{
+     font-size:14px ;
+     line-height: 20px;
+     letter-spacing: 0.3px;
+     margin: 20px 0;
+ }
+ 
+ .contact span{
+     font-size: 12px;
+ }
+ .container2 a{
+     color: var(--navygold);
+     font-size: 13px;
+     text-decoration: none;
+     margin:15px 0 10px;
+ }
+ 
+ .container2 .btn{
+     margin-top: 1rem;
+     display: inline-block;
+     padding: .9rem 3rem;
+     font-size: 1.7rem;
+     color: #fff;
+     background: var(--blue);
+     cursor: pointer;
+     border: 1px solid transparent;
+ }
+ 
+ .container2 .btn:hover{
+     letter-spacing: .2rem;
+ }
+ 
+ .container2 .btn.hidden{
+     background-color: transparent;
+     border-color: #fff;
+ }
+ 
+ .container2 form{
+     background-color:var(--white) ;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     padding: 0 40px;
+     height: 100%;
+ }
+ 
+ .container2 input, select{
+     background-color:#eee;
+     text-transform: none;
+     border: none;
+     margin: 8px 0;
+     padding: 10px 15px;
+     font-size: 13px;
+     border-radius: 8px;
+     width: 100%;
+     outline:none ;
+ }
+ 
+ .form-container2 {
+     position: absolute;
+     top: 0;
+     height: 100%;
+     transition: all 0.6s ease-in-out;
+ }
+ .form-container2 form .error-msg{
+    margin: 10px 0;
+    display: block;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    padding:10px ;
+}
+ .sign-in{
+     left: 0;
+     width: 50%;
+     z-index: 2;
+ }
+ .container2 .active .sign-in{
+     transform: translateX(100%);
+ }
+ 
+ .container .active .sign-up{
+     transform: translateX(100%);
+     opacity: 1;
+     z-index: 5;
+     animation: move 0.6s;
+ 
+ }
+ .social-icons{
+     margin: 20px 0;
+ }
+ .social-icons a{
+     border: 1px solid #ccc;
+     border-radius: 20%;
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     margin: 0 3px;
+     width: 40px;
+     height: 40px;
+ }
+ .toggle-container2{
+     position: absolute;
+     top: 0;
+     left: 50%;
+     width: 50%;
+     height: 100%;
+     overflow: hidden;
+     transition: all 0.6s ease-in-out;
+     border-radius: 150px 0 0 100px;
+     z-index: 1000;
+ }
+ .container2 .active .toggle-container2{
+     transform:translateX(-100%) ;
+     border-radius: 0 150px 100px 0;
+ }
+ .toggle2{
+     background-color: var(--gold);
+     height: 100%;
+     background: linear-gradient(to right,#cFB53B, #a57c00 );
+     color: #eee;
+     position: relative;
+     left:-100%;
+     height: 100%;
+     width: 200%;
+     transform: translateX(0);
+     transition: all 0.6s ease-in-out;
+ }
+ 
+ .toggle-pannel2{
+     position: absolute;
+     width: 50%;
+     height: 100%;
+     display: flex;
+     align-items:center ;
+     justify-content: center;
+     flex-direction: column;
+     padding:0 30px ;
+     text-align: center;
+     top: 0;
+     transform: translateX(0);
+     transition: all 0.6s ease-in-out;
+ }
+ 
+ 
+ .toggle-right{
+     right: 0;
+    
+ }
+/* login form ends here*/
+
+/* registration form starts here*/
+.body{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction:column ;
+    height: 100vh; 
+    margin: auto;
+   
+ }
+ .container{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    top: 50vh;
+    left: 50vh;
+    transform: translate(-50vh, -50vh);
+    overflow: hidden;
+    width: 800px;
+    max-width: 100%;
+    min-height: 500px;
+    margin: auto;
+}
+.container p{
+    font-size:14px ;
+    line-height: 15px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+.contact span{
+    font-size: 12px;
+}
+.container a{
+    color: var(--navygold);
+    font-size: 12px;
+    text-decoration: none;
+    margin:15px 0 10px;
+}
+.container .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--blue);
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.container .btn:hover{
+    letter-spacing: .2rem;
+}
+.container .btn.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+.container form{
+    background-color:var(--white) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    height: 100%;
+}
+.container input{
+    background-color:#eee;
+    text-transform: none;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 12px;
+    border-radius: 8px;
+    width: 100%;
+    outline:none ;
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+.form-container form .error-msg{
+    margin: 10px 0;
+    display: block;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    padding:10px ;
+}
+.sign-up{
+    right: 0;
+    width: 50%;
+    z-index: 2;
+}
+.container .active .sign-up{
+    transform: translateX(100%);
+}
+
+.social-icons{
+    margin: 10px 0;
+}
+.social-icons a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 30px;
+    height: 30px;
+}
+.toggle-container{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 0 100px 150px 0;
+    z-index: 1000;
+}
+.container .active .toggle-container{
+    transform:translateX(-100%) ;
+    border-radius: 0 150px 100px 0;
+}
+.toggle{
+    background-color: var(--gold);
+    height: 100%;
+    background: linear-gradient(to right,#cFB53B, #a57c00 );
+    color: #eee;
+    position: relative;
+    left:-100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+.container .active .toggle{
+    transform: translateX(50%);
+}
+.toggle-pannel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: column;
+    padding:0 30px ;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    right: 0;
+   
+}
+/* Registartion form ends here*/
+/* Dashboard starts here*/
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow:hidden ;
+    transition: all 0.5s linear;
+    background:var(--blue) ;
+
+}
+/*.sidebar:hover{
+    width: 180px;
+}*/
+.sidebar h5{
+    text-align: center;
+    margin-top: -30px;
+
+}
+.sidebar img{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-top: -70px;
+}
+.h1 span{
+    text-align: center;
+    margin-left: 40px;
+
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+
+}
+.menu li{
+    padding:1rem;
+    margin:8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.menu li:hover,
+.active{
+    background: var(--navygold);
+}
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+
+
+
+/* Style for the dropdown content sidebar*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--blue); /* Adjust the background color to match your sidebar theme */
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+/* Style for the dropdown items */
+.dropdown-item {
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    color: #fff; /* Text color for dropdown items */
+    font-size: 12px; /* Adjust the font size */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Change color on hover */
+.dropdown-item:hover {
+    background-color: var(--navygold); /* Change the background color on hover to match the active state in the sidebar */
+}
+/* Style for the dropdown content  menu*/
+.dropdown-mcontent {
+    display: none;
+    position: absolute;
+    background-color: #eee; /* Adjust the background color to match your sidebar theme */
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+/* Style for the dropdown items */
+.dropdown-mitem {
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color:var(--blue); /* Text color for dropdown items */
+    font-size: 12px; /* Adjust the font size */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Change color on hover */
+.dropdown-mitem:hover {
+    background-color: var(--white); /* Change the background color on hover to match the active state in the sidebar */
+}
+/* Style for the dropdown content  custody reason*/
+.dropdown-ccontent {
+    display: none;
+    position: absolute;
+    background-color: #eee; /* Adjust the background color to match your sidebar theme */
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+/* Style for the dropdown items */
+.dropdown-citem {
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color:var(--blue); /* Text color for dropdown items */
+    font-size: 12px; /* Adjust the font size */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Change color on hover */
+.dropdown-citem:hover {
+    background-color: var(--white); /* Change the background color on hover to match the active state in the sidebar */
+}
+
+/* main body starts here*/
+.main--content{
+    position: relative;
+    background:var(--bg);
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--white);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 10px 2rem;
+}
+.header--title {
+    color: var(--blue);
+}
+.header--wrapper .header--title h3 span{
+    color: var(--m-gold);
+    font-size: large;
+}
+.user--info{
+    display: flex;
+    align-items: center;
+    gap: 1;
+}
+.search--box { 
+    background:#e0dfdf ;
+    border-radius: 15px ;
+    color:var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.search--box input {
+    background: transparent;
+    padding: 10px;
+
+}
+.search--box i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.search--box i:hover{
+    transform: scale(1.1);
+}
+
+/* chart container*/
+.charts{
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    gap: 20px;
+}
+.charts-card{
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding:25px;
+    box-sizing: border-box;
+    -webkit-column-break-inside: avoid;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    box-shadow:0 6px 7px -4px rgba(0, 0, 0, 0.2) ;
+}
+.chart-tittle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+/* profile starts here*/
+.container{
+    min-height: 100vh;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+ }
+ 
+ .container .profile{
+    padding:20px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    width: 400px;
+    border-radius: 5px;
+ }
+ 
+ .container .profile img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+ }
+ 
+ .container .profile h3{
+    margin:5px 0;
+    font-size: 20px;
+    color:var(--black);
+ }
+/*profile ends here*/ 
+/*update profile starts here*/
+.update-profile {
+    min-height: 100vh;
+    background-color: #f5f5f5; /* Light background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+ }
+ 
+ .update-profile form {
+    padding: 20px;
+    background-color: #fff; /* White background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+    text-align: center;
+    width: 700px;
+    border-radius: 8px; /* Rounded corners */
+ }
+ 
+ .update-profile form img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px; /* Increased margin */
+ }
+ 
+ .update-profile form .flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px; /* Increased gap between elements */
+ }
+ 
+ .update-profile form .flex .inputBox {
+    width: 48%; /* Slightly reduced width to accommodate increased gap */
+ }
+ 
+ .update-profile form .flex .inputBox span {
+    text-align: left;
+    display: block;
+    margin-top: 15px;
+    font-size: 18px; /* Increased font size */
+    color:var(--blue); /* Darker text color */
+ }
+ 
+ .update-profile form .flex .inputBox .box {
+    width: 100%;
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px;
+    padding: 12px 14px;
+    font-size: 16px;
+    color:var(--navyblue); /* Text color */
+    margin-top: 10px;
+ }
+ 
+ .update-profile form .btn {
+    margin-top: 1rem;
+     display: inline-block;
+     padding: .9rem 3rem;
+     font-size: 1.7rem;
+     color: #fff;
+     background: var(--blue);
+     cursor: pointer;
+     border: 1px solid transparent; 
+ }
+ 
+ .update-profile form .btn:hover {
+    color: var(--m-gold); 
+    letter-spacing: .2rem;/* Darker background color on hover */
+ }
+ 
+ .update-profile form .delete-btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--blue);
+    cursor: pointer;
+    border: 1px solid transparent;
+ }
+ 
+ .update-profile form .delete-btn:hover {
+    color:var(--m-gold);
+    letter-spacing: .2rem; /* Darker text color on hover */
+ }
+ 
+ 
+/*update profile ends here*/
+/*Add case starts here*/
+
+.add-case {
+    min-height: 70vh;
+    background-color: #f5f5f5; /* Light background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius:8px ;
+    margin: auto;
+ }
+ .form-title {
+    font-size: 24px;
+    margin-bottom: 100px;
+    padding-bottom: 300px;
+    padding-right:100px ;
+    margin-top: 0;
+}
+ .add-case form {
+    padding: 20px;
+    background-color: #fff; /* White background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift */
+    text-align: center;
+    width: 700px;
+    border-radius: 8px; /* Rounded corners */
+ }
+ 
+ .add-case form .flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px; /* Increased gap between elements */
+ }
+ 
+ .add-case form .flex .inputBox {
+    width: 48%; /* Slightly reduced width to accommodate increased gap */
+ }
+ 
+ .add-case form .flex .inputBox span {
+    text-align: left;
+    display: block;
+    margin-top: 15px;
+    font-size: 18px; /* Increased font size */
+    color:var(--blue); /* Darker text color */
+ }
+ 
+ .add-case form .flex .inputBox .box {
+    width: 100%;
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px;
+    padding: 12px 14px;
+    font-size: 16px;
+    color:var(--navyblue); /* Text color */
+    margin-top: 10px;
+ }
+ 
+ .add-case form .btn {
+    margin-top: 1rem;
+     display: inline-block;
+     padding: .9rem 3rem;
+     font-size: 1.7rem;
+     color: #fff;
+     background: var(--blue);
+     cursor: pointer;
+     border: 1px solid transparent; 
+ }
+ 
+ .add-case form .btn:hover {
+    letter-spacing: .2rem;/* Darker background color on hover */
+ }
+ 
+ /* Add case ends here*/
+ /* add more case details form starts here*/
+ .container3{
+    min-height: 100vh;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    padding:2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:auto;
+    width: 100%;
+ }
+.container3 .flex2,
+.container3 .flex3 {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.container3 .flex2 span,
+.container3 .flex3 span {
+    text-align: left;
+    display:flex;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--blue); /* Adjust the color as needed */
+}
+
+.container3 .flex2 input,
+.container3 .flex2 textarea {
+    width: 85%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: var(--navyblue); /* Adjust the color as needed */
+    
+}
+
+.container3 .flex3 input,
+.container3 .flex3 textarea {
+    width: 90%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: var(--navyblue); /* Adjust the color as needed */
+    
+}
+
+.container3 .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--blue); /* Adjust the color as needed */
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.container3 .btn:hover {
+    letter-spacing: .2rem;
+    /* Darker background color on hover */
+}
+
+  /* add more case details form ends here*/
+
+  /*view case details starts here*/
+  /* Style for the cases header */
+   /*view case details ends here*/
